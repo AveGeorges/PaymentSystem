@@ -15,34 +15,34 @@
 ## 🚀 Установка и запуск
 
 1. Клонируйте репозиторий:
-https://github.com/AveGeorges/PaymentSystem.git
+- https://github.com/AveGeorges/PaymentSystem.git
 2. Создайте и активируйте виртуальное окружение:
 python -m venv venv
-source venv/bin/activate  # Linux/MacOS
-venv\Scripts\activate  # Windows
+- source venv/bin/activate  # Linux/MacOS
+- venv\Scripts\activate  # Windows
 3. Установите зависимости:
-pip install -r req.txt
+- pip install -r req.txt
 4. Создайте .env и используйте .env.example для примера заполнения
 5. Примените миграции:
-python manage.py migrate
+- python manage.py migrate
 6. Создайте суперпользователя:
-python manage.py createsuperuser
+- python manage.py createsuperuser
 7. Запустите локальный сервер:
-python manage.py runserver
+- python manage.py runserver
 
 ## 🌐 API Endpoints
 
 Основные endpoints:
-POST	/api/webhook/bank/	               Прием платежных уведомлений
-GET	  /api/organizations/{inn}/balance/	 Получение баланса организации
-GET	  /api/payments/	                   Список платежей с фильтрацией
+- POST	/api/webhook/bank/	               Прием платежных уведомлений
+- GET	  /api/organizations/{inn}/balance/	 Получение баланса организации
+- GET	  /api/payments/	                   Список платежей с фильтрацией
 
 Документация API:
-Swagger UI: /api/swagger/
-ReDoc:      /api/redoc/
+- Swagger UI: /api/swagger/
+- ReDoc:      /api/redoc/
 
 Пример запроса вебхука:
-POST /api/webhook/bank/
+- POST /api/webhook/bank/
 {
   "operation_id": "ccf0a86d-041b-4991-bcf7-e2352f7b8a4a",
   "amount": 145000,
